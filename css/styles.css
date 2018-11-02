@@ -303,7 +303,7 @@ nav h1 a {
   }
 
   #restaurants-list {
-    padding-left: 10%;
+    padding-left: 7%;
     font-size: 2em;
   }
   
@@ -316,7 +316,7 @@ nav h1 a {
   }
 
   #restaurant-container {
-    padding: 875px 40px 30px;
+    padding: 575px 25px 30px;
     width: 100%;
   }
 
@@ -347,6 +347,11 @@ nav h1 a {
   .filter-options select {
     font-size: 1.2em;
   }
+
+  .inside #map,
+  .inside #map-container {
+    height: 400px;
+  }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 500px) {
@@ -367,7 +372,7 @@ nav h1 a {
   }
 
   #restaurant-container {
-    padding: 800px 40px 30px;
+    padding: 740px 30px 30px;
     width: 100%;
   }
   
