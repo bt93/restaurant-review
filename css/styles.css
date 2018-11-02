@@ -299,7 +299,7 @@ nav h1 a {
 
   #restaurants-list p
   {
-    font-size: 2em;
+    font-size: 1.5pt;
   }
 
   #restaurants-list {
@@ -358,6 +358,11 @@ nav h1 a {
   body {
     width: 83%
   }
+
+  #restaurant p {
+    font-size: 3pt
+  }
+
   #restaurants-list {
     padding-left: 20%;
   }
