@@ -5,7 +5,6 @@ class DBHelper {
 
   /**
    * Database URL.
-   * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
     return `https://jasonrhowie.com/restaurant-review/data/restaurants.json`;
