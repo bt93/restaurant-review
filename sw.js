@@ -29,18 +29,4 @@ self.addEventListener('fetch', (event) => {
 	event.respondWith(
 		caches.match(event.request)
 	)
-	.then( (res) => {
-		if(res !== undefined) {
-			return res;
-		} else {
-			return fetch(event.request).then( (res) => {
-				let reponseClone = res.clone();
-
-				caches.open('v1').then( (cache) => {
-					cache.put(event.request, reponseClone);
-				});
-				return res;
-			})
-		}
-	});
-})
+});
