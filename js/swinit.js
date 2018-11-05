@@ -7,4 +7,6 @@ if('serviceWorker' in navigator) {
 	.catch((err) => {
 		console.log('Service Worker Registration Unsuccessful', err);
 	})
+} else {
+	console.log('This browser does not support Service Workers.');
 }
