@@ -1,5 +1,5 @@
 self.addEventListener('install', (event) => {
-	console.log('Event:', event);
+	console.log('Servive Worker Installing');
 	event.waitUntil(
 		caches.open('v1').then( (cache) => {
 			return cache.addAll([
@@ -13,7 +13,26 @@ self.addEventListener('install', (event) => {
 				'/css/styles.css',
 				'/img/'
 			]);
-			console.log('Cache: ', cache);
 		})
 	);
 });
+
+self.addEventListener('fetch', (event) => {
+	event.respondWith(
+		caches.match(event.request)
+	)
+	.then( (res) => {
+		if(res !== undefined) {
+			return res;
+		} else {
+			return fetch(event.request).then( (res) => {
+				let reponseClone = res.clone();
+
+				caches.open('v1').then( (cache) => {
+					cache.put(event.request, reponseClone);
+				});
+				return res;
+			})
+		}
+	});
+})
