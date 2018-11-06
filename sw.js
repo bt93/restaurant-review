@@ -20,7 +20,7 @@ const cachedItems = [
 
 const version = 'v1';
 
-
+// Installs service worker and caches files
 self.addEventListener('install', (event) => {
 	console.log('Servive Worker Installing');
 	event.waitUntil(
@@ -29,7 +29,7 @@ self.addEventListener('install', (event) => {
 		})
 	);
 });
-
+// Fetches Cached files
 self.addEventListener('fetch', (event) => {
 	event.respondWith(
 		caches.match(event.request)
