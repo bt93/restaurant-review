@@ -1,8 +1,4 @@
-self.addEventListener('install', (event) => {
-	console.log('Servive Worker Installing');
-	event.waitUntil(
-		caches.open('v1').then( (cache) => {
-			return cache.addAll([
+const cachedItems = [
 				'/restaurant-review/index.html',
 				'/restaurant-review/restaurant.html',
 				'/restaurant-review/data/restaurants.json',
@@ -20,7 +16,16 @@ self.addEventListener('install', (event) => {
 				'/restaurant-review/img/7.jpg',
 				'/restaurant-review/img/8.jpg',
 				'/restaurant-review/img/9.jpg'
-			]);
+				];
+
+const version = 'v1';
+
+
+self.addEventListener('install', (event) => {
+	console.log('Servive Worker Installing');
+	event.waitUntil(
+		caches.open(version).then( (cache) => {
+			return cache.addAll(cachedItems);
 		})
 	);
 });
