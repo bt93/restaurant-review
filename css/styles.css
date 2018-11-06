@@ -11,6 +11,7 @@ body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
+  width: 98%;
 }
 
 ul{
@@ -41,9 +42,13 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+.inside header{
+  z-index: 1000;
+}
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  width: 102%;
 }
 #footer {
   background-color: #444;
@@ -57,7 +62,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 /* ====================== Navigation ====================== */
 nav {
-  width: 100%;
+  width: 102%;
   height: 80px;
   background-color: #252831;
   text-align:center;
@@ -109,6 +114,7 @@ nav h1 a {
   height: 400px;
   width: 100%;
   background-color: #ccc;
+  z-index: 1;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
@@ -288,7 +294,19 @@ nav h1 a {
 
 @media only screen and (max-width: 500px) {
   body {
-    width: 100%
+    width: 97%;
+  }
+
+  .inside {
+    width: 82%;
+  }
+
+  #maincontent {
+    width: 104%;
+  }
+
+  nav {
+    width: 104%;
   }
 
   nav h1 a,
@@ -356,7 +374,11 @@ nav h1 a {
 
 @media only screen and (max-width: 900px) and (min-width: 500px) {
   body {
-    width: 83%
+    width: 82%
+  }
+  
+  .inside {
+    width: 71%;
   }
 
   #restaurant p {
@@ -383,7 +405,7 @@ nav h1 a {
   
   .inside #map,
   #maincontent {
-    width: 120.5%;
+    width: 122.5%;
   }
   .inside #map-container {
     height: 21%;
@@ -403,11 +425,11 @@ nav h1 a {
     width: 120.5%;
   }
   .inside #footer {
-    width: 116%;
+    width: 145%;
   }
 
   #footer {
-    width: 111.3%;
+    width: 112.3%;
   }
 }
 

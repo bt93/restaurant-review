@@ -29,6 +29,7 @@ self.addEventListener('install', (event) => {
 		})
 	);
 });
+
 // Fetches Cached files
 self.addEventListener('fetch', (event) => {
 	event.respondWith(
