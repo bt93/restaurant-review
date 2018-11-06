@@ -36,9 +36,8 @@ self.addEventListener('fetch', (event) => {
 		.then( (res) => {
 			if (res) {
 				return res
-			} else {
-				return fetch(event.request);
-			}
+			} 
+			return fetch(event.request);
 		})
 	)
 });
