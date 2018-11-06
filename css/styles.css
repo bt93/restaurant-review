@@ -329,6 +329,10 @@ nav h1 a {
     padding: 0 30px 25px;
   }
 
+  .filter-options {
+    height: auto;
+  }
+
   .filter-options select {
     width: 150px;
   }
